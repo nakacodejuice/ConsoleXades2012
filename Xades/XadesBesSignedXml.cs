@@ -84,8 +84,8 @@ namespace Xades
 
             SigningKey = CryptoProvider.GetAsymmetricAlgorithm(certificate, privateKeyPassword);
 
-            //Signature.Id = signatureId;
-            //SignatureValueId = string.Format("{0}-sigvalue", signatureId);
+            Signature.Id = signatureId;
+            SignatureValueId = string.Format("{0}-sigvalue", signatureId);
 
             var reference = CryptoProvider.GetReference(SignedElementId, signatureId);
             AddReference(reference);
